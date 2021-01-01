@@ -1,10 +1,14 @@
+import { Button } from "@material-ui/core";
 import React from "react";
 import "./Sidebar.css";
+import AddIcon from "@material-ui/icons/Add";
 
 function Sidebar() {
   return (
     <div className="sidebar">
-      <h3>Sidebar Bolte</h3>
+      <Button className="compose" startIcon={<AddIcon fontSize="large" />}>
+        Compose
+      </Button>
     </div>
   );
 }
