@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid azure;
+    border-bottom: 1px solid lightgray;
 }
 
 .header__left{
@@ -14,4 +14,31 @@
     object-fit: contain;
     height: 40px;
     margin-left: 5px;
+}
+
+.header__middle {
+    display: flex;
+    flex: 0.7;
+    align-items: center;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.header__middle > .MuiSvgIcon-root {
+    color: gray;
+}
+
+.header__middle > input {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    outline-width: 0;
+    font-size: medium;
+    background-color: transparent;
+}
+
+.header__right {
+    display: flex;
+    padding-right: 20px;
 }
