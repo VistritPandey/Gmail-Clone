@@ -3,8 +3,8 @@ import "./App.css";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Mail } from "@material-ui/icons";
 import EmailList from "./EmailList";
+import Mail from "./Mail";
 
 function App() {
   return (
