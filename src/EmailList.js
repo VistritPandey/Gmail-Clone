@@ -8,6 +8,10 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import KeyboardHideIcon from "@material-ui/icons/KeyboardHide";
 import SettingsIcon from "@material-ui/icons/Settings";
+import InboxIcon from "@material-ui/icons/Inbox";
+import PeopleIcon from "@material-ui/icons/People";
+import LocalOfferIcon from "@material-ui/icons/LocalOffer";
+import Section from "./Section";
 
 function EmailList() {
   return (
@@ -41,7 +45,9 @@ function EmailList() {
         </div>
       </div>
       <div className="emailList__sections">
-        <h2>This is the email section</h2>
+        <Section Icon={InboxIcon} title="Primary" color="red" selected />
+        <Section Icon={PeopleIcon} title="Social" color="#1A73E8" />
+        <Section Icon={LocalOfferIcon} title="Promotions" color="green" />
       </div>
     </div>
   );
