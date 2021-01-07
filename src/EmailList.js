@@ -57,6 +57,54 @@ function EmailList() {
           description="Aur bhai mil gaya SWAG?"
           time="13:00"
         />
+        <EmailRow
+          title="MLH"
+          subject="Paisa de de mujhe"
+          description="Aur bhai mil gaya SWAG?"
+          time="13:00"
+        />
+        <EmailRow
+          title="MLH"
+          subject="Paisa de de mujhe"
+          description="Aur bhai mil gaya SWAG?"
+          time="13:00"
+        />
+        <EmailRow
+          title="MLH"
+          subject="Paisa de de mujhe"
+          description="Aur bhai mil gaya SWAG?"
+          time="13:00"
+        />
+        <EmailRow
+          title="MLH"
+          subject="Paisa de de mujhe"
+          description="Aur bhai mil gaya SWAG?"
+          time="13:00"
+        />
+        <EmailRow
+          title="MLH"
+          subject="Paisa de de mujhe"
+          description="Aur bhai mil gaya SWAG?"
+          time="13:00"
+        />
+        <EmailRow
+          title="MLH"
+          subject="Paisa de de mujhe"
+          description="Aur bhai mil gaya SWAG?"
+          time="13:00"
+        />
+        <EmailRow
+          title="MLH"
+          subject="Paisa de de mujhe"
+          description="Aur bhai mil gaya SWAG?"
+          time="13:00"
+        />
+        <EmailRow
+          title="MLH"
+          subject="Paisa de de mujhe"
+          description="Aur bhai mil gaya SWAG?"
+          time="13:00"
+        />
       </div>
     </div>
   );
