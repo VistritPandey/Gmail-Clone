@@ -60,43 +60,7 @@ function EmailList() {
         <EmailRow
           title="MLH"
           subject="Paisa de de mujhe"
-          description="Aur bhai mil gaya SWAG?"
-          time="13:00"
-        />
-        <EmailRow
-          title="MLH"
-          subject="Paisa de de mujhe"
-          description="Aur bhai mil gaya SWAG?"
-          time="13:00"
-        />
-        <EmailRow
-          title="MLH"
-          subject="Paisa de de mujhe"
-          description="Aur bhai mil gaya SWAG?"
-          time="13:00"
-        />
-        <EmailRow
-          title="MLH"
-          subject="Paisa de de mujhe"
-          description="Aur bhai mil gaya SWAG?"
-          time="13:00"
-        />
-        <EmailRow
-          title="MLH"
-          subject="Paisa de de mujhe"
-          description="Aur bhai mil gaya SWAG?"
-          time="13:00"
-        />
-        <EmailRow
-          title="MLH"
-          subject="Paisa de de mujhe"
-          description="Aur bhai mil gaya SWAG?"
-          time="13:00"
-        />
-        <EmailRow
-          title="MLH"
-          subject="Paisa de de mujhe"
-          description="Aur bhai mil gaya SWAG?"
+          description="Aur bhai mil gaya SWAG? bol bhau...........................................................................kya hua"
           time="13:00"
         />
         <EmailRow
