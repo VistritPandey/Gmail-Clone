@@ -20,3 +20,8 @@
     display: flex;
     justify-content: center;
 }
+
+.sidebar__foot{
+    display: flex;
+    justify-content: center;
+}

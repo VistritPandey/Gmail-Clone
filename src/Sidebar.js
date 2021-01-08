@@ -10,11 +10,22 @@ import LabelImportantIcon from "@material-ui/icons/LabelImportant";
 import NearMeIcon from "@material-ui/icons/NearMe";
 import NoteIcon from "@material-ui/icons/Note";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import PersonIcon from "@material-ui/icons/Person"
-import DuoIcon from "@material-ui/icons/Duo"
-import PhoneIcon from "@material-ui/icons/Phone"
+import PersonIcon from "@material-ui/icons/Person";
+import DuoIcon from "@material-ui/icons/Duo";
+import PhoneIcon from "@material-ui/icons/Phone";
+import { useDispatch } from "react-redux";
+import { logout } from "./features/userSlice";
+import { auth } from "./Firebase";
 
 function Sidebar() {
+  const dispatch = useDispatch();
+
+  const signOut = () => {
+    auth.signOut().then(() => {
+      dispatch(logout());
+    });
+  };
+
   return (
     <div className="sidebar">
       <Button className="compose" startIcon={<AddIcon fontSize="large" />}>
@@ -35,16 +46,21 @@ function Sidebar() {
 
       <div className="sidebar__footer">
         <div className="sidebar__footerIcons">
-            <IconButton>
-              <PersonIcon />
-            </IconButton>
-            <IconButton>
-              <DuoIcon />
-            </IconButton>
-            <IconButton>
-              <PhoneIcon />
-            </IconButton>
+          <IconButton>
+            <PersonIcon />
+          </IconButton>
+          <IconButton>
+            <DuoIcon />
+          </IconButton>
+          <IconButton>
+            <PhoneIcon />
+          </IconButton>
         </div>
+      </div>
+      <div className="sidebar__foot">
+        <Button onClick={signOut} variant="contained" color="secondary">
+          Logout
+        </Button>
       </div>
     </div>
   );
