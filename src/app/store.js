@@ -1,8 +1,10 @@
+import mailReducer from "../features/mailSlice";
+import userReducer from "../features/userSlice";
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "../features/userSlice";
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
+    mail: mailReducer,
+    user: userReducer,
   },
 });
