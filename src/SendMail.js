@@ -5,7 +5,7 @@ import CloseRoundedIcon from "@material-ui/icons/CloseRounded";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { closeSendMessage } from "./features/mailSlice";
-import { db } from "./Firebase";
+import { db } from "./firebase";
 import firebase from "firebase";
 
 const SendMail = () => {
@@ -26,7 +26,7 @@ const SendMail = () => {
   return (
     <div className="sendMail">
       <div className="sendMail__header">
-        <h3>New E-mail</h3>
+        <h3>Write a new E-mail</h3>
         <IconButton onClick={() => dispatch(closeSendMessage())}>
           <CloseRoundedIcon className="sendMail__close" />
         </IconButton>
@@ -50,7 +50,7 @@ const SendMail = () => {
         )}
         <input
           name="message"
-          placeholder="Message..."
+          placeholder="Start your message here!!"
           type="text"
           className="sendMail__message"
           ref={register({ required: true })}

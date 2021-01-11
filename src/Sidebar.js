@@ -1,26 +1,25 @@
 import { Button, IconButton } from "@material-ui/core";
+import SidebarOption from "./SidebarOption";
 import React from "react";
 import "./Sidebar.css";
 import AddIcon from "@material-ui/icons/Add";
-import SidebarOption from "./SidebarOption";
-import InboxIcon from "@material-ui/icons/Inbox";
-import StarIcon from "@material-ui/icons/Star";
-import AccessTimeIcon from "@material-ui/icons/AccessTime";
-import LabelImportantIcon from "@material-ui/icons/LabelImportant";
-import NearMeIcon from "@material-ui/icons/NearMe";
-import NoteIcon from "@material-ui/icons/Note";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import PersonIcon from "@material-ui/icons/Person";
-import DuoIcon from "@material-ui/icons/Duo";
-import PhoneIcon from "@material-ui/icons/Phone";
+import InboxRoundedIcon from "@material-ui/icons/InboxRounded";
+import StarRoundedIcon from "@material-ui/icons/StarRounded";
+import AccessTimeRoundedIcon from "@material-ui/icons/AccessTimeRounded";
+import NearMeRoundedIcon from "@material-ui/icons/NearMeRounded";
+import LabelImportantRoundedIcon from "@material-ui/icons/LabelImportantRounded";
+import NoteRoundedIcon from "@material-ui/icons/NoteRounded";
+import ExpandMoreRoundedIcon from "@material-ui/icons/ExpandMoreRounded";
+import PersonRoundedIcon from "@material-ui/icons/PersonRounded";
+import DuoRoundedIcon from "@material-ui/icons/DuoRounded";
+import PhoneRoundedIcon from "@material-ui/icons/PhoneRounded";
 import { useDispatch } from "react-redux";
 import { logout } from "./features/userSlice";
-import { auth } from "./Firebase";
+import { auth } from "./firebase";
 import { openSendMessage } from "./features/mailSlice";
 
-function Sidebar() {
+const Sidebar = () => {
   const dispatch = useDispatch();
-
   const signOut = () => {
     auth.signOut().then(() => {
       dispatch(logout());
@@ -29,33 +28,36 @@ function Sidebar() {
 
   return (
     <div className="sidebar">
-      <Button className="compose" startIcon={<AddIcon fontSize="large" />}
-      onClick={() => dispatch(openSendMessage())}>
+      <Button
+        className="sidebar__compose"
+        startIcon={<AddIcon fontSize="large" />}
+        onClick={() => dispatch(openSendMessage())}
+      >
         Compose
       </Button>
       <SidebarOption
-        Icon={InboxIcon}
+        Icon={InboxRoundedIcon}
         title="Inbox"
         number={23}
-        selected={true}
+        selected
       />
-      <SidebarOption Icon={StarIcon} title="Starred" />
-      <SidebarOption Icon={AccessTimeIcon} title="Snoozed" />
-      <SidebarOption Icon={LabelImportantIcon} title="Important" />
-      <SidebarOption Icon={NearMeIcon} title="Sent" />
-      <SidebarOption Icon={NoteIcon} title="Drafts" />
-      <SidebarOption Icon={ExpandMoreIcon} title="More" />
+      <SidebarOption Icon={StarRoundedIcon} title="Starred" />
+      <SidebarOption Icon={AccessTimeRoundedIcon} title="Snoozed" />
+      <SidebarOption Icon={LabelImportantRoundedIcon} title="Important" />
+      <SidebarOption Icon={NearMeRoundedIcon} title="Sent" />
+      <SidebarOption Icon={NoteRoundedIcon} title="Drafts" />
+      <SidebarOption Icon={ExpandMoreRoundedIcon} title="More" />
 
       <div className="sidebar__footer">
         <div className="sidebar__footerIcons">
           <IconButton>
-            <PersonIcon />
+            <PersonRoundedIcon />
           </IconButton>
           <IconButton>
-            <DuoIcon />
+            <DuoRoundedIcon />
           </IconButton>
           <IconButton>
-            <PhoneIcon />
+            <PhoneRoundedIcon />
           </IconButton>
         </div>
       </div>
@@ -66,6 +68,6 @@ function Sidebar() {
       </div>
     </div>
   );
-}
+};
 
 export default Sidebar;

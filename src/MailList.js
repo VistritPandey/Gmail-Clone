@@ -1,6 +1,6 @@
 import { Checkbox, IconButton } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
-import "./EmailList.css";
+import "./MailList.css";
 import ArrowDropDownRoundedIcon from "@material-ui/icons/ArrowDropDownRounded";
 import RedoRoundedIcon from "@material-ui/icons/RedoRounded";
 import MoreVertRoundedIcon from "@material-ui/icons/MoreVertRounded";
@@ -13,7 +13,7 @@ import InboxRoundedIcon from "@material-ui/icons/InboxRounded";
 import PeopleRoundedIcon from "@material-ui/icons/PeopleRounded";
 import LocalOfferRoundedIcon from "@material-ui/icons/LocalOfferRounded";
 import EmailRow from "./EmailRow";
-import { db } from "./Firebase";
+import { db } from "./firebase";
 
 const MailList = () => {
   const [emails, setEmails] = useState([]);
