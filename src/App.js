@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Mail from "./Mail";
 import EmailList from "./EmailList";
-//import SendMail from './SendMail';
+import SendMail from './SendMail';
 import { useDispatch, useSelector } from "react-redux";
 import { selectSendMessageIsOpen } from "./features/mailSlice";
 import { login, selectUser } from "./features/userSlice";
@@ -13,7 +13,7 @@ import Login from "./Login";
 import { auth } from "./Firebase";
 
 function App() {
-  // const sendMessageIsOpen = useSelector(selectSendMessageIsOpen);
+  const sendMessageIsOpen = useSelector(selectSendMessageIsOpen);
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
 
@@ -52,7 +52,7 @@ function App() {
             </Switch>
           </div>
 
-          {/*sendMessageIsOpen && <SendMail />*/}
+          {sendMessageIsOpen && <SendMail />}
         </div>
       )}
     </Router>
