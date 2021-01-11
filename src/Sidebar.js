@@ -16,6 +16,7 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import { useDispatch } from "react-redux";
 import { logout } from "./features/userSlice";
 import { auth } from "./Firebase";
+import { openSendMessage } from "./features/mailSlice";
 
 function Sidebar() {
   const dispatch = useDispatch();
@@ -28,7 +29,8 @@ function Sidebar() {
 
   return (
     <div className="sidebar">
-      <Button className="compose" startIcon={<AddIcon fontSize="large" />}>
+      <Button className="compose" startIcon={<AddIcon fontSize="large" />}
+      onClick={() => dispatch(openSendMessage())}>
         Compose
       </Button>
       <SidebarOption
